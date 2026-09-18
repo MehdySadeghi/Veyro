@@ -22,8 +22,8 @@ import {
 } from "../../../features/cartSlice";
 
 import styles from "./Nav.module.css";
-import logoLight from "../../../images/logo-light.svg";
-import { products } from "../../../data/Producs";
+import logoLight from "../../../images/logo/logo-light.svg";
+import { products } from "../../../data/ProductsData";
 
 function Nav({ variant = "dark" }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

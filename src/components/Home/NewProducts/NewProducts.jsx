@@ -1,6 +1,6 @@
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { products } from "../../../data/Producs";
+import { products } from "../../../data/ProductsData";
 
 import styles from "./NewProducts.module.css";
 import ProductCard from "../../Global/ProductCard/ProductCard";

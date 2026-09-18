@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import heroBg from "../../../images/hero-bg.jpg";
+import heroBg from "../../../images/home/hero.jpg";
 import Nav from "../../Global/Navbar/Nav";
 import { Link } from "react-router-dom";
 

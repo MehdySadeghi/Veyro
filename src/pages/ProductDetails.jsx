@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { products } from "../data/Producs";
+import { products } from "../data/ProductsData";
 
 import ProductDetailsHero from "../components/ProductDetails/ProductDetailsHero";
 import Nav from "../components/Global/Navbar/Nav";

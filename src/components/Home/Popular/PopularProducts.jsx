@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import styles from "./PopularProducts.module.css";
-import { products } from "../../../data/Producs";
+import { products } from "../../../data/ProductsData";
 import ProductCard from "../../Global/ProductCard/ProductCard";
 import { MoveRight } from "lucide-react";
 

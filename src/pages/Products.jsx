@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { products } from "../data/Producs";
+import { products } from "../data/ProductsData";
 import { useSearchParams } from "react-router-dom";
 
 import styles from "./Products.module.css";
