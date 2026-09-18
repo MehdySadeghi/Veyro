@@ -1,0 +1,385 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: var(--color-text-light);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 6, 7, 0.9) 0%,
+      rgba(5, 6, 7, 0.72) 24%,
+      rgba(5, 6, 7, 0.34) 52%,
+      rgba(5, 6, 7, 0.08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 6, 7, 0.48) 0%,
+      rgba(5, 6, 7, 0.04) 42%,
+      rgba(5, 6, 7, 0.68) 100%
+    );
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background: radial-gradient(
+    circle at 17% 54%,
+    rgba(34, 211, 238, 0.1),
+    transparent 26%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero__content {
+  position: absolute;
+
+  top: 50%;
+  left: max(2rem, calc((100vw - var(--container-width)) / 2));
+
+  transform: translateY(-50%);
+
+  width: min(62rem, 48vw);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.hero__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 2.2rem;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.hero h1 {
+  max-width: 62rem;
+
+  margin: 0;
+
+  color: var(--color-text-light);
+
+  font-family: var(--font-display);
+  font-size: clamp(5.2rem, 7vw, 9rem);
+  font-weight: 600;
+
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 0.2rem;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero__description {
+  max-width: 54rem;
+
+  margin: 3rem 0 0;
+
+  color: var(--color-text-light);
+
+  font-family: var(--font-display);
+  font-size: clamp(var(--font-size-lg), 1.7vw, var(--font-size-2xl));
+
+  line-height: 1.45;
+}
+
+/* =========================
+   SUPPORTING COPY
+========================= */
+
+.hero__supporting {
+  max-width: 46rem;
+
+  margin: 1.4rem 0 0;
+
+  color: var(--color-text-light-muted);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+
+  line-height: var(--line-height-relaxed);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  margin-top: 3.4rem;
+
+  min-height: 4.6rem;
+
+  padding: 1.3rem 1.8rem;
+
+  color: var(--color-surface-dark);
+  background: var(--color-text-light);
+
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+
+  text-decoration: none;
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.hero__button svg {
+  width: 1.7rem;
+  height: 1.7rem;
+
+  transition: transform var(--transition-fast);
+}
+
+.hero__button:hover {
+  color: var(--color-surface-dark);
+  background: var(--color-accent);
+
+  transform: translateY(-0.2rem);
+
+  box-shadow: 0 1.2rem 3rem rgba(34, 211, 238, 0.14);
+}
+
+.hero__button:hover svg {
+  transform: translate(0.15rem, -0.15rem);
+}
+
+.hero__button:focus-visible {
+  outline: 0.2rem solid var(--color-accent);
+  outline-offset: 0.4rem;
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.hero__scroll {
+  position: absolute;
+
+  left: max(2rem, calc((100vw - var(--container-width)) / 2));
+
+  bottom: 3.2rem;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  color: var(--color-text-light-muted);
+
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+
+  letter-spacing: 0.04em;
+}
+
+.hero__scrollLine {
+  display: block;
+
+  width: 4.5rem;
+  height: 0.1rem;
+
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 62.5em) {
+  .hero__content {
+    left: 5%;
+
+    width: min(62rem, 72vw);
+  }
+
+  .hero h1 {
+    font-size: clamp(5rem, 9vw, 8rem);
+  }
+
+  .hero__description {
+    margin-top: 2.6rem;
+  }
+
+  .hero__button {
+    margin-top: 3rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 37.5em) {
+  .hero {
+    min-height: 72rem;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 6, 7, 0.5) 0%,
+      rgba(5, 6, 7, 0.72) 42%,
+      rgba(5, 6, 7, 0.92) 100%
+    );
+  }
+
+  .hero__content {
+    top: 52%;
+
+    left: 2rem;
+    right: 2rem;
+
+    width: auto;
+
+    transform: translateY(-50%);
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 1.6rem;
+
+    font-size: 1.1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.8rem, 15vw, 7rem);
+  }
+
+  .hero__description {
+    max-width: 42rem;
+
+    margin-top: 2.2rem;
+
+    font-size: var(--font-size-lg);
+  }
+
+  .hero__supporting {
+    max-width: 38rem;
+
+    margin-top: 1.2rem;
+
+    font-size: var(--font-size-sm);
+  }
+
+  .hero__button {
+    margin-top: 2.8rem;
+  }
+
+  .hero__scroll {
+    left: 2rem;
+    bottom: 2.4rem;
+  }
+}
+@media (max-width: 25em) {
+  .hero {
+    min-height: 68rem;
+  }
+
+  .hero__image {
+    object-position: 60% left;
+  }
+
+  .hero__content {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.2rem, 16vw, 5.8rem);
+  }
+
+  .hero__description {
+    margin-top: 2rem;
+
+    font-size: var(--font-size-md);
+  }
+
+  .hero__supporting {
+    font-size: 1.35rem;
+  }
+
+  .hero__button {
+    margin-top: 2.5rem;
+  }
+
+  .hero__scroll {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+}

@@ -1,0 +1,292 @@
+.story {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  width: min(calc(100% - (var(--gutter) * 2)), var(--container-width));
+
+  margin-inline: auto;
+  margin-block: 10rem;
+
+  background: var(--color-surface);
+
+  font-family: var(--font-display);
+
+  overflow: hidden;
+
+  border-top: 0.1rem solid var(--color-border);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.hero + .story {
+  margin-top: 8rem;
+}
+
+.story:last-of-type {
+  margin-bottom: 14rem;
+}
+
+.story__image {
+  position: relative;
+
+  width: 100%;
+  height: clamp(44rem, 42vw, 58rem);
+
+  overflow: hidden;
+
+  background: var(--color-surface-dark);
+}
+
+.story__image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(5, 6, 7, 0.03), rgba(5, 6, 7, 0.28));
+
+  pointer-events: none;
+}
+
+.story__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: bottom;
+
+  transition: transform 700ms var(--ease-out);
+}
+
+.story:hover .story__image img {
+  transform: scale(1.025);
+}
+
+.story__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: clamp(44rem, 42vw, 58rem);
+
+  padding: clamp(5rem, 7vw, 8rem);
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.018), transparent 52%),
+    var(--color-surface);
+
+  color: var(--color-text);
+}
+
+.story__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 2rem;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.story__content h2 {
+  max-width: 52rem;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 4.5vw, 6rem);
+  font-weight: 600;
+
+  line-height: var(--line-height-tight);
+
+  letter-spacing: -0.05em;
+}
+
+.story__description {
+  max-width: 50rem;
+
+  margin: 2.6rem 0 0;
+
+  color: var(--color-text-soft);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+
+  line-height: var(--line-height-relaxed);
+}
+
+.story__list {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.6rem;
+
+  margin: 4.5rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.story__list li {
+  position: relative;
+
+  padding-top: 1.5rem;
+
+  color: var(--color-text);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+
+  line-height: var(--line-height-normal);
+
+  border-top: 0.1rem solid var(--color-border);
+}
+
+.story__list li::before {
+  content: "";
+
+  position: absolute;
+
+  top: -0.1rem;
+  left: 0;
+
+  width: 2.4rem;
+  height: 0.1rem;
+
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 75em) {
+  .story {
+    margin-block: 8rem;
+  }
+
+  .story__image,
+  .story__content {
+    min-height: 52rem;
+  }
+
+  .story__image {
+    height: 52rem;
+  }
+
+  .story__content {
+    padding: 5rem;
+  }
+
+  .story__list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .story {
+    grid-template-columns: 1fr;
+
+    margin-block: 7rem;
+  }
+
+  .story__image {
+    height: 48rem;
+    min-height: 0;
+    grid-row: 1/ 2;
+  }
+
+  .story__content {
+    min-height: auto;
+
+    padding: 6rem 5rem;
+  }
+
+  .story__content h2 {
+    max-width: 60rem;
+  }
+
+  .story__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .story {
+    width: calc(100% - 3rem);
+
+    margin-block: 6rem;
+  }
+
+  .hero + .story {
+    margin-top: 6rem;
+  }
+
+  .story:last-of-type {
+    margin-bottom: 9rem;
+  }
+
+  .story__image {
+    height: 34rem;
+  }
+
+  .story__content {
+    padding: 4.5rem 2.4rem 5rem;
+  }
+
+  .story__eyebrow {
+    margin-bottom: 1.5rem;
+  }
+
+  .story__content h2 {
+    font-size: clamp(3.4rem, 10vw, 4.8rem);
+  }
+
+  .story__description {
+    margin-top: 2rem;
+
+    font-size: var(--font-size-sm);
+  }
+
+  .story__list {
+    grid-template-columns: 1fr;
+
+    gap: 1.2rem;
+
+    margin-top: 3.2rem;
+  }
+
+  .story__list li {
+    padding-top: 1.2rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .story {
+    width: calc(100% - 2rem);
+
+    margin-block: 5rem;
+  }
+
+  .story__image {
+    height: 30rem;
+  }
+
+  .story__content {
+    padding-inline: 2rem;
+  }
+}

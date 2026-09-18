@@ -1,0 +1,139 @@
+.shopFeatures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 100%;
+  padding: var(--space-24) 4rem;
+  margin: var(--space-24) 0;
+
+  background-color: var(--color-surface);
+  border-top: 0.1rem solid var(--color-border);
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+.feature {
+  padding: 0 3.2rem;
+
+  color: var(--color-text);
+}
+
+.feature:first-child {
+  padding-left: 0;
+}
+
+.feature:last-child {
+  padding-right: 0;
+}
+
+.feature + .feature {
+  border-left: 0.1rem solid var(--color-border);
+}
+
+.feature__header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.feature__header svg {
+  flex-shrink: 0;
+
+  width: 2.2rem;
+  height: 2.2rem;
+
+  color: var(--color-accent);
+
+  stroke-width: 1.7;
+}
+
+.feature__header h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  line-height: var(--line-height-snug);
+  letter-spacing: -0.02em;
+}
+
+.feature p {
+  max-width: 30rem;
+
+  margin-top: 1.4rem;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 65rem) {
+  .shopFeatures {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 0;
+
+    padding: 6rem 3rem;
+  }
+
+  .feature {
+    padding: 0 3rem;
+  }
+
+  .feature:nth-child(3) {
+    border-left: none;
+  }
+
+  .feature:nth-child(n + 3) {
+    padding-top: 3rem;
+    border-top: 0.1rem solid var(--color-border);
+  }
+
+  .feature:nth-child(2n + 1) {
+    padding-left: 0;
+  }
+
+  .feature:nth-child(2n) {
+    padding-right: 0;
+  }
+
+  .feature:nth-child(2) {
+    border-left: 0.1rem solid var(--color-border);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 40rem) {
+  .shopFeatures {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    padding: 5rem 2.4rem;
+  }
+
+  .feature,
+  .feature:first-child,
+  .feature:last-child {
+    padding: 2.8rem 0;
+  }
+
+  .feature:first-child {
+    padding-top: 0;
+  }
+
+  .feature:last-child {
+    padding-bottom: 0;
+  }
+
+  .feature + .feature {
+    border-left: none;
+    border-top: 0.1rem solid var(--color-border);
+  }
+
+  .feature p {
+    max-width: 100%;
+  }
+}
