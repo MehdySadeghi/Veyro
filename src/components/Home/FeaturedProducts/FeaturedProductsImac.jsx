@@ -1,5 +1,5 @@
 import { MoveRight } from "lucide-react";
-import Imac from "../../../images/featured/Imac.jpg";
+import Imac from "../../../images/featured/imac.jpg";
 import styles from "./FeaturedProductsImac.module.css";
 import { Link } from "react-router-dom";
 

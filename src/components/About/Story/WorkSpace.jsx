@@ -1,5 +1,5 @@
 import styles from "./WorkSpace.module.css";
-import WorkSpaceImg from "../../../images/about/WorkSpace.webp";
+import WorkSpaceImg from "../../../images/about/workSpace.webp";
 
 function WorkSpace() {
   return (

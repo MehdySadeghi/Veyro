@@ -1,5 +1,5 @@
 import styles from "./People.module.css";
-import PeopleImg from "../../../images/about/People.webp";
+import PeopleImg from "../../../images/about/people.webp";
 
 function People() {
   return (

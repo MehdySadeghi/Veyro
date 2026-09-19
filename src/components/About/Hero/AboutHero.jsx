@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./AboutHero.module.css";
 
-import Hero from "../../../images/about/Hero.webp";
+import Hero from "../../../images/about/hero.webp";
 import Nav from "../../Global/Navbar/Nav";
 
 function AboutHero() {

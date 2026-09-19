@@ -2,6 +2,10 @@
 
 Veyro is a responsive e-commerce frontend focused on modern technology products. The project was built to practice React development, reusable component design, client-side routing, state management, responsive layouts, and accessible user interactions.
 
+## Live Demo
+
+https://veyro-shop.netlify.app/ (open with VPN if you are in Iran)
+
 ## Overview
 
 Veyro presents a collection of technology products through a product-focused shopping experience. The application includes product browsing, filtering, search, product details, a shopping cart, and responsive navigation across desktop, tablet, and mobile layouts.

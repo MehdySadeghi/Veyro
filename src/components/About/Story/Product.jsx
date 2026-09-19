@@ -1,5 +1,5 @@
 import styles from "./Product.module.css";
-import ProductImg from "../../../images/about/Product.webp";
+import ProductImg from "../../../images/about/product.webp";
 
 function Product() {
   return (

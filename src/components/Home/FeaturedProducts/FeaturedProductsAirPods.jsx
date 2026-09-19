@@ -1,7 +1,7 @@
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import AirPodsMax from "../../../images/featured/AirPodsMax.jpg";
+import AirPodsMax from "../../../images/featured/airPodsMax.jpg";
 import styles from "./FeaturedProductsAirPods.module.css";
 
 function FeaturedProductsAirPods() {

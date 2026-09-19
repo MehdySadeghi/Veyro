@@ -1,6 +1,6 @@
 import styles from "./LifestyleSection.module.css";
-import side1 from "../../../images/Lifestyle/side-1.webp";
-import side2 from "../../../images/Lifestyle/side-2.webp";
+import side1 from "../../../images/lifestyle/side-1.webp";
+import side2 from "../../../images/lifestyle/side-2.webp";
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
